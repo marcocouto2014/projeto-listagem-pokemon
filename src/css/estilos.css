@@ -1,0 +1,182 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;
+    /*Vamos limitar a largura maxima do body*/
+    margin: 0 auto;
+    /*Agora vamos centralizar e dar margem ao body*/
+    background-color: #5e5b5bad;
+    /*Agora vamos gerar uma cor de fundo para o body*/
+    color: #333333;
+    /*Agora vamos mudar a cor do texto de tudo que estiver no body*/
+}
+
+/*Agora vamos definir a troca de tema, do fundo. Que será feita no javascript*/
+/*criamos uma classe body.modo.escuro*/
+
+body.modo-escuro { /*estilizando o modo-escuro*/ 
+    background-color: #212121;
+    color: #f5f5f5;
+}
+
+header {
+    display: flex;
+    /*usar este elemento dentro do conceito pai e filho*/
+    justify-content: space-between;
+    /*Utilizado para dar espaço entre os elementos*/
+    padding: 25px;
+    /*Responsavél pelo tratamento das bordas dos elementos, imagem e botão*/
+}
+
+header .logo,
+/*. é usado para pesquisar id*/
+header .imagem-botao {
+    /*estiliza a classe logo e botao por pesquisa de id */
+    width: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+header #botao-alterar-tema {
+    /*# uado também para pesquisar id do botão*/
+    border: none;
+    /*sem borda*/
+    cursor: pointer;
+    /*faz a exolha do mouse. Neste caso, pointer é a maozinha*/
+}
+
+header .logo:hover:hover,
+/*criei uma sbclasse logo hover que irá escalar o logo*/
+header .imagem-botao:hover,
+/*criei uma subclasse image-botão hover que irá escalar o botão*/
+main .cartao-pokemon:hover {
+    transform: scale(1.10);
+    /*scale o botão e o logo*/
+    cursor: pointer;
+}
+
+
+main {
+    /*estamos estilizando o main agora*/
+    /*background-color: antiquewhite;   cor de fundo do main cor branca*/
+    padding: 25px;
+    /*para dar um espaçamento na borda*/
+}
+
+main .listagem-pokemom {
+    /* o flex na <li listagem-pokemon, pois é pai dos filhos html*/
+    display: flex;
+    /*para colocar o pokemon um ao lado do outro*/
+    flex-wrap: wrap;
+    /*quando não tem mais espaço para a lateral, ele joga para baixo*/
+    gap: 30px;
+    /* altera a propriedade dos pais nos filhos, dando espaço entre eles*/
+    justify-content: center;
+    /*vai justificar, centralizar todos os cartoes no centro da listagem*/
+}
+
+main .cartao-pokemon {
+    /*estilizando o cartão*/
+    background-color: #d8e3ec;
+    /*cor de fundo do cartão*/
+    width: 200px;
+    /*largura do cartão*/
+    padding: 15px;
+    /*para dar um espaçamento na borda do cartão*/
+    display: flex;
+    flex-direction: column;
+    /*vai alinhar um de baixo do outro*/
+    align-items: center;
+    /*vai alinhar os itens do cartão no centro*/
+    gap: 15;
+    /*da um tratamento entre os elementos*/
+    border-radius: 15px;
+    /*Efeito de borda arredondada em cada cartão*/
+    transition: 0.2s ease-in-out;
+    /*efeito ao tocar o mouse no cartão de in-out*/
+}
+
+main .cartao-pokemon:hover {
+    background-color: #96d9d6;
+    /*colocamos regra especifica aqui no hover, para que o background-color so mude aqui no cartão*/
+}
+
+.modo-escuro .cartao-pokemon {
+    background-color: #a8a8a8;
+}
+
+main .cartao-pokemon .informacoes {
+    display: flex;
+    /*colocar as informações uma ao lado da outra*/
+    justify-content: space-between;
+    /*Centralizando as informações internas do cartão*/
+    border: 1px solid #333333;
+    /*estilizando a borda onde fica o nome do pokemon*/
+    border-radius: 10px;
+    /*estilizando a borda arredondada onde fica o nome do pokemon*/
+}
+
+main .cartao-pokemon .informacoes span {
+    padding: 5px;
+    /*criando espaço entre nome e número do pokemon*/
+    text-transform: uppercase;
+    /*passando todas letras nome do pokemon p/ maiusculo */
+    font-size: 17px;
+    /*mudando o tamanho da fonte nome e numero pokemon*/
+}
+
+main .cartao-pokemon .gif {
+    /*criando a classe gif para ser estilizada*/
+    width: 90px;
+    /*vamos padronizar o tamanho dos cartões*/
+    height: 90px;
+}
+
+main .cartao-pokemon .tipos {
+    /*criando classe tipo para ser estilizada*/
+    display: flex;
+    /*para colocar os tipos um ao lado do outro*/
+    gap: 15px;
+    /*para dar um espaçamento entre os tipos*/
+}
+
+main .cartao-pokemon .tipo {
+    /*criando uma classe tipo para ser estilizada*/
+    padding: 8px;
+    /*usado para dar espaçamento maior na borda do tipo*/
+    border-radius: 10px;
+}
+
+.grama {
+    background-color: #7ac74c;
+    /*usado para estilizar o fundo do tipo grama*/
+}
+
+.veneno {
+    background-color: #df67ddfb;
+    /*usado para estilizar o fundo do tipo veneno*/
+}
+
+.fogo {
+    background-color: #ee8130;
+    /*usado para estilizar o fundo do tipo fogo*/
+}
+
+.água {
+    background-color: #6390f0;
+    /*usado para estilizar o fundo do tipo água*/
+}
+
+.inseto {
+    background-color: #a6d91a;
+    /*usado para estilizar o fundo do tipo inseto*/
+}
+
+main .descricao {
+    max-height: 80px;
+    /*altura maxima da descrição*/
+    overflow-y: scroll;
+    /*esconde o texto e cria uma barra de rolagem*/
+    font-size: 14px;
+    /*usado para diminuir a fonte*/
+    padding-right: 10px;
+    /*espaçamento do texto somente à direita*/
+}
